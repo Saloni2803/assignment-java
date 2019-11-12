@@ -1,6 +1,6 @@
 //Reverse of  a Binary Tree 
 import java.util.*;  
-public class BinaryNode1 
+public class BinaryNode2
 { 
     static class Node
 { 
@@ -14,11 +14,11 @@ public class BinaryNode1
 } ;
     Node root; 
   
-    public BinaryNode1() 
+    public BinaryNode2() 
     { 
         root = null; 
     }
-    static void printLevelOrder() 
+    void printLevelOrder(Node root) 
     { 
         int h = height(root); 
         int i; 
@@ -51,7 +51,7 @@ public class BinaryNode1
             printGivenLevel(root.right, level-1); 
         } 
     } 
-    static Node insert(Node root, int data)  
+    Node insert(Node root, int data)  
    {  
     Node node= new Node(data);
     if(root==null){
@@ -86,6 +86,6 @@ public static void main(String args[])
     tree.insert(root, 70);  
     tree.insert(root, 60);  
     tree.insert(root, 80);    
-    tree.printLevelOrder(); 
+    tree.printLevelOrder(root); 
     } 
 } 
